@@ -28,6 +28,9 @@ body{
     justify-content: space-between;
     align-items: center;
 
+    width: 400px; /*ginawa ko nang fixed umay nako*/
+    height: auto;
+
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, .75);
@@ -93,15 +96,21 @@ body{
     margin: 7px;
 }
 
-#buttonNo {
+.choice-button:nth-child(2) {
     position: absolute;
 
-    width: 5vw;
+    width: 6em;
 
-    top: 31.5vh;
-    left: 50%vw;
+    /*top: 31.5vh;*/
+    /*left: 50%vw;*/
+
+    top: 18.0em;
+
+    left: 0; 
+    right: 0; 
+    margin: auto;
 }
 
 #buttonYes {
-    width: 5vw;
+    width: 6em;
 }
