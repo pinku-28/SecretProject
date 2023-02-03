@@ -5,6 +5,7 @@ const buttonYes = document.querySelector('#buttonYes');
 const buttonNo = document.querySelector('#buttonNo');
 const header = document.querySelector('.header');
 const forceNo = document.querySelector('.forceNo');
+const choices = document.querySelector('.choices');
 
 const wrapperRect = wrapper.getBoundingClientRect();
 const buttonNoRect = buttonNo.getBoundingClientRect();
@@ -35,6 +36,7 @@ function removeButtons(){;
     forceNo.remove();
     buttonNo.remove();
     buttonYes.remove();
+    choices.remove();
 }
 
 

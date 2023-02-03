@@ -14,56 +14,51 @@ html {
     padding: 0;
 }
 
-body {
+body{
+    background: linear-gradient(160deg, rgb(110, 65, 182), rgb(243, 135, 225));
     display: grid;
     place-content: center;
-    align-items: center;
-    background: linear-gradient(160deg, rgb(110, 65, 182), rgb(243, 135, 225));
-    display: flex;
-    font-display: swap;
     height: inherit;
 }
 
+
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, .75);
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 1px;
     border-color: aliceblue;
+
     box-shadow: 0 4px 20px hsla(357, 90%, 71%, 0.6);
     color: rgb(56, 56, 56);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, .50);
-    flex-basis: 50%;
-    padding: 24px 24px;
-    padding-bottom: 72px;
+    background: rgba(255, 255, 255, 0.5);
+
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+
     text-align: center;
+
+    margin: 50px;
 }
 
 .title {
     font-size: 200%;
     font-weight: bold;
     margin-bottom: 10px;
-    padding: 5px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-button {
-    margin-top: 20px;
-    cursor: pointer;
-    padding: 2%;
-    opacity: 60%;
-    transition: opacity .3s;
-}
-
-button:hover {
-    opacity: 85%;
-}
-
-button:active {
-    opacity: 1;
+.note {
+    margin: 10px;
 }
 
 .choice-button {
@@ -72,28 +67,41 @@ button:active {
     border: solid;
     border-width: 1px;
     border-radius: 25px;
-    margin-right: 5px;
-    transition: opacity 0.15s;
+
+    transition: opacity .15s;
+
+    padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: absolute;
-    width: 75px;
-    height: 35px;
 }
 
-button:nth-child(1){
-    margin-left: -30%;
-}
+.choices {
+    margin: 5;
+    margin-bottom: 35px;
+    padding: 10px;
 
-button:nth-child(2){
-    margin-left: 15%;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .forceNo {
-    position: fixed;
-    top: 180%;
-    left: 90%;
-    font-size: 10%;
+    font-size: 7px;
+    font-style:italic;
+
+    padding: 5px;
+    margin: 7px;
+}
+
+#buttonNo {
+    position: absolute;
+
+    width: 5vw;
+
+    top: 31.5vh;
+    left: 50%vw;
+}
+
+#buttonYes {
+    width: 5vw;
 }
