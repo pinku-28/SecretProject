@@ -126,8 +126,8 @@ body{
     animation-duration: 1s;
 }
 
-@-webkit-keyframes fadeUp {
+@keyframes fadeUp {
     0%   {opacity: 100;}
     100% {opacity: 0;}
-    to {top: calc(inherit - 50px);}
+    to {transform: translateY(-100px);;}
 }
