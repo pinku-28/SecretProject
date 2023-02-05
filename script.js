@@ -78,9 +78,11 @@ function createChibi(coorX, coorY){
     img.style.top = coorX + "px";
     img.style.left = coorY + "px";
 
+    img.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+
     function deleteChibi(){
         img.remove();
     }
 
-    setTimeout(deleteChibi, 1000);
+    setTimeout(deleteChibi, 900);
 }
