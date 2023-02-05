@@ -10,8 +10,8 @@ const choices = document.querySelector('.choices');
 const wrapperRect = wrapper.getBoundingClientRect();
 const buttonNoRect = buttonNo.getBoundingClientRect();
 
-//for No, kailangan ko ng function na (DONE)
-//magrarandomize ng position ng No everytime it is hovered (DONE)
+//f̶o̶r̶ N̶o̶,̶ k̶a̶i̶l̶a̶n̶g̶a̶n̶ k̶o̶ n̶g̶ f̶u̶n̶c̶t̶i̶o̶n̶ n̶a̶ (̶D̶O̶N̶E̶)̶
+//m̶a̶g̶r̶a̶r̶a̶n̶d̶o̶m̶i̶z̶e̶ n̶g̶ p̶o̶s̶i̶t̶i̶o̶n̶ n̶g̶ N̶o̶ e̶v̶e̶r̶y̶t̶i̶m̶e̶ i̶t̶ i̶s̶ h̶o̶v̶e̶r̶e̶d̶ (̶D̶O̶N̶E̶)̶
 
 function clickYes(){
     title.innerHTML = "YAY!";
@@ -21,7 +21,7 @@ function clickYes(){
 
 function hoverNo(){
     var i = Math.floor(Math.random() * (wrapperRect.width
-        - buttonNoRect.width)) - 200 ;
+        - buttonNoRect.width)) - 150;
     var j = Math.floor(Math.random() * (wrapperRect.height
         - buttonNoRect.height));
 
@@ -44,15 +44,13 @@ function removeButtons(){;
 
 /*----------------------------------------------------------------*/
  
-//create a function that creates chibiyanami.png (DONE)
-//and accepts coordinates as arguments FunctionName(posX, posY) (DONE)
+//c̶r̶e̶a̶t̶e̶ a̶ f̶u̶n̶c̶t̶i̶o̶n̶ t̶h̶a̶t̶ c̶r̶e̶a̶t̶e̶s̶ c̶h̶i̶b̶i̶y̶a̶n̶a̶m̶i̶.̶p̶n̶g̶ (̶D̶O̶N̶E̶)̶
+//a̶n̶d̶ a̶c̶c̶e̶p̶t̶s̶ c̶o̶o̶r̶d̶i̶n̶a̶t̶e̶s̶ a̶s̶ a̶r̶g̶u̶m̶e̶n̶t̶s̶ F̶u̶n̶c̶t̶i̶o̶n̶N̶a̶m̶e̶(̶p̶o̶s̶X̶,̶ p̶o̶s̶Y̶)̶ (̶D̶O̶N̶E̶)̶
 
-//create a function that gets mouse coordinates (DONE)
-//and sets it as "posX" and "poxY" respectively (DONE)
+//c̶r̶e̶a̶t̶e̶ a̶ f̶u̶n̶c̶t̶i̶o̶n̶ t̶h̶a̶t̶ g̶e̶t̶s̶ m̶o̶u̶s̶e̶ c̶o̶o̶r̶d̶i̶n̶a̶t̶e̶s̶ (̶D̶O̶N̶E̶)̶
+//a̶n̶d̶ s̶e̶t̶s̶ i̶t̶ a̶s̶ "̶p̶o̶s̶X̶"̶ a̶n̶d̶ "̶p̶o̶x̶Y̶"̶ r̶e̶s̶p̶e̶c̶t̶i̶v̶e̶l̶y̶ (̶D̶O̶N̶E̶)̶
 
-document.addEventListener("click", function handleClick(event) {
-    var chibi = document.getElementById("ayanami");
-    
+document.addEventListener("click", function handleClick(event) {    
     posX = event.clientY - 35;
     posY = event.clientX - 22;
     createChibi(posX, posY)
@@ -63,8 +61,11 @@ document.addEventListener("click", function handleClick(event) {
     var textX = document.querySelector('.textX');
     var textY = document.querySelector('.textY');
 
-    textX.innerHTML = posX;
-    textY.innerHTML = posY;
+    textX.innerHTML = posX + "x";
+    textY.innerHTML = posY + "y";
+
+     /* FOR DEBUGGING PURPOSES!!!!
+       DELETE LATER!!!! */
 })
 
 function createChibi(coorX, coorY){
@@ -72,8 +73,14 @@ function createChibi(coorX, coorY){
     img.src = "chibiyanami.png";
     document.body.appendChild(img);
 
-    img.style.position=  "absolute";
+    img.className += "animated";
+
     img.style.top = coorX + "px";
     img.style.left = coorY + "px";
-}
 
+    function deleteChibi(){
+        img.remove();
+    }
+
+    setTimeout(deleteChibi, 1000);
+}

@@ -58,10 +58,15 @@ body{
     padding-top: 25px;
     padding-left: 25px;
     padding-right: 25px;
+    
+    -webkit-user-select: none;
+
 }
 
 .note {
     margin: 10px;
+
+    -webkit-user-select: none;
 }
 
 .choice-button {
@@ -96,10 +101,12 @@ body{
     margin: 7px;
 }
 
+.choice-button {
+    width: 5em;
+}
+
 .choice-button:nth-child(2) {
     position: absolute;
-
-    width: 6em;
 
     /*top: 31.5vh;*/
     /*left: 50%vw;*/
@@ -111,10 +118,16 @@ body{
     margin: auto;
 }
 
-#buttonYes {
-    width: 6em;
+.animated {
+    position: absolute;
+    -webkit-user-drag: none;
+
+    animation-name: fadeUp;
+    animation-duration: 1s;
 }
 
-#ayanami {
-    position: absolute;
+@-webkit-keyframes fadeUp {
+    0%   {opacity: 100;}
+    100% {opacity: 0;}
+    to {top: calc(inherit - 50px);}
 }
