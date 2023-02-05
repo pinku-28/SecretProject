@@ -114,3 +114,7 @@ body{
 #buttonYes {
     width: 6em;
 }
+
+#ayanami {
+    position: absolute;
+}
