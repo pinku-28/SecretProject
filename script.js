@@ -54,18 +54,6 @@ document.addEventListener("click", function handleClick(event) {
     posX = event.clientY - 35;
     posY = event.clientX - 22;
     createChibi(posX, posY)
-
-    /* FOR DEBUGGING PURPOSES!!!!
-       DELETE LATER!!!! */
-
-    var textX = document.querySelector('.textX');
-    var textY = document.querySelector('.textY');
-
-    textX.innerHTML = posX + "x";
-    textY.innerHTML = posY + "y";
-
-     /* FOR DEBUGGING PURPOSES!!!!
-       DELETE LATER!!!! */
 })
 
 function createChibi(coorX, coorY){
