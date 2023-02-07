@@ -1,6 +1,6 @@
 const wrapper = document.querySelector('.wrapper');
 const title = document.querySelector('.title');
-const subtext = document.querySelector('.note');
+const subtext = document.querySelector('.subtext');
 const buttonYes = document.querySelector('#buttonYes');
 const buttonNo = document.querySelector('#buttonNo');
 const header = document.querySelector('.header');
