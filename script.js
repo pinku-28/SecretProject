@@ -6,6 +6,10 @@ const buttonNo = document.querySelector('#buttonNo');
 const header = document.querySelector('.header');
 const forceNo = document.querySelector('.forceNo');
 const choices = document.querySelector('.choices');
+const yesImage = document.querySelector('#yesImage');
+const noImage = document.querySelector('#noImage');
+const yesNote = document.querySelector('#yesNote');
+const noNote = document.querySelector('#noNote');
 
 const wrapperRect = wrapper.getBoundingClientRect();
 const buttonNoRect = buttonNo.getBoundingClientRect();
@@ -16,6 +20,8 @@ const buttonNoRect = buttonNo.getBoundingClientRect();
 function clickYes(){
     title.innerHTML = "YAY!";
     subtext.innerHTML = "you may request a movie (≧∇≦)ﾉ";
+    yesImage.style.display = "block";
+    yesNote.style.display = "block";
     removeButtons();
 }
 
@@ -32,6 +38,8 @@ function hoverNo(){
 function clickNo(){
     title.innerHTML = ":<";
     subtext.innerHTML = "awww okay 😉"
+    noImage.style.display = "block";
+    noNote.style.display = "block";
     removeButtons();
 }
 

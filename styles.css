@@ -138,3 +138,16 @@ body{
 #testText {
     user-select: none;
 }
+
+.image {
+    display: none;
+    width: 150px;
+    height: 150px;
+}
+
+.note {
+    display: none;
+    margin: 8px;
+
+    font-size: 8px;
+}
